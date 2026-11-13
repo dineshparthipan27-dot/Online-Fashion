@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vogue Boutique | Online Fashion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <header class="header" data-aos="fade-down" data-aos-duration="800">
+        <div class="container header-container">
+
+
+            <a href="index.html" class="logo-container">
+                <img src="./asset/logo.webp" alt="Company Logo" class="logo-img">
+            </a>
+
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="404.html" class="nav-link">Categories</a></li>
+                    <li class="nav-item"><a href="404.html" class="nav-link">New Arrivals</a></li>
+                    <li class="nav-item"><a href="404.html" class="nav-link">Offers</a></li>
+                </ul>
+            </nav>
+
+
+            <div class="header-actions">
+
+
+
+                <button class="mobile-toggle" id="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <main id="main-content">
+
+
+        <section id="home" class="hero">
+            <div class="container hero-container">
+
+
+                <div class="hero-content" data-aos="fade-right" data-aos-duration="1200">
+                    <span class="subtitle">Spring / Summer Collection</span>
+                    <h2>Discover Your <br> <span>True Style</span></h2>
+                    <p>Elevate your wardrobe with our exclusive fashion collections. Handpicked trends designed just for
+                        you.</p>
+                    <a href="404.html" class="btn-primary">Shop Now</a>
+                </div>
+
+
+                <div class="hero-image" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                    <img src="/asset/of.webp" alt="Fashion Banner">
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="categories" class="categories section-padding">
+            <div class="container">
+
+
+                <div class="section-title" data-aos="fade-up" data-aos-duration="800">
+                    <h2>Featured <span>Categories</span></h2>
+                    <p>Explore our wide range of premium fashion collections</p>
+                </div>
+
+
+                <div class="category-grid">
+
+
+                    <div class="category-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                        <img src="/asset/of1.webp" alt="Women's Fashion">
+                        <div class="category-overlay">
+                            <div class="category-content">
+                                <h3>Women's Fashion</h3>
+                                <a href="404.html" class="shop-link">Shop Now <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="category-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <img src="/asset/of2.webp" alt="Men's Fashion">
+                        <div class="category-overlay">
+                            <div class="category-content">
+                                <h3>Men's Fashion</h3>
+                                <a href="404.html" class="shop-link">Shop Now <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="category-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <img src="/asset/of3.webp" alt="Kids Wear">
+                        <div class="category-overlay">
+                            <div class="category-content">
+                                <h3>Kids Wear</h3>
+                                <a href="404.html" class="shop-link">Shop Now <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="category-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                        <img src="/asset/of4.webp" alt="Accessories">
+                        <div class="category-overlay">
+                            <div class="category-content">
+                                <h3>Accessories</h3>
+                                <a href="404.html" class="shop-link">Shop Now <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="new-arrivals" class="products-section section-padding">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-up" data-aos-duration="800">
+                    <h2>New <span>Arrivals</span></h2>
+                    <p>Discover the latest fashion trends and exclusive collections</p>
+                </div>
+
+
+                <div id="loading-state" class="loading-spinner" data-aos="zoom-in"></div>
+
+
+                <div id="error-state" class="error-message" style="display: none;"></div>
+
+
+                <div id="new-arrivals-grid" class="product-grid" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="100">
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="trending" class="products-section section-padding" style="background-color: var(--light);">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-up" data-aos-duration="800">
+                    <h2>Trending <span>Products</span></h2>
+                    <p>Top picks and popular styles of the week</p>
+                </div>
+
+
+                <div class="filter-btns" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="womens-dresses">Women's Dresses</button>
+                    <button class="filter-btn" data-filter="mens-shirts">Men's Shirts</button>
+                    <button class="filter-btn" data-filter="womens-shoes">Shoes</button>
+                    <button class="filter-btn" data-filter="tops">Tops</button>
+                </div>
+
+
+                <div id="trending-loading" class="loading-spinner" data-aos="zoom-in"></div>
+                <div id="trending-error" class="error-message" style="display: none;"></div>
+
+
+                <div id="trending-grid" class="product-grid" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200">
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="best-sellers" class="products-section section-padding">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-right" data-aos-duration="800">
+                    <h2>Best <span>Sellers</span></h2>
+                    <p>Our most loved and highest-rated fashion pieces</p>
+                </div>
+
+
+                <div id="bestsellers-loading" class="loading-spinner" data-aos="zoom-in"></div>
+                <div id="bestsellers-error" class="error-message" style="display: none;"></div>
+
+
+                <div id="bestsellers-grid" class="product-grid" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="100">
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="offers" class="special-offers section-padding">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-up" data-aos-duration="800">
+                    <h2>Special <span>Offers</span></h2>
+                    <p>Exclusive deals and promotions you don't want to miss</p>
+                </div>
+
+
+                <div class="offers-grid">
+
+
+                    <div class="offer-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
+                        <img src="asset/of5.webp" alt="Summer Sale">
+                        <div class="offer-content">
+                            <span class="offer-subtitle">Season Clearance</span>
+                            <h3>Up to <span>50% Off</span></h3>
+                            <p>On selected women's clothing</p>
+                            <a href="404.html" class="offer-link">Shop Collection <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+
+                    <div class="offer-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+                        <img src="asset/of6.webp" alt="Accessories Offer">
+                        <div class="offer-content">
+                            <span class="offer-subtitle">Flash Deal</span>
+                            <h3>Buy 1 <span>Get 1 Free</span></h3>
+                            <p>On all premium accessories</p>
+                            <a href="404.html" class="offer-link">Shop Collection <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+
+                    <div class="offer-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="300">
+                        <img src="asset/of7.webp" alt="Free Shipping">
+                        <div class="offer-content">
+                            <span class="offer-subtitle">Limited Time</span>
+                            <h3>Free <span>Shipping</span></h3>
+                            <p>On all orders above $100</p>
+                            <a href="404.html" class="offer-link">Shop Collection <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="testimonials" class="testimonials section-padding" style="background-color: var(--light);">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-down" data-aos-duration="800">
+                    <h2>Customer <span>Reviews</span></h2>
+                    <p>What our beautiful customers say about our boutique</p>
+                </div>
+
+
+                <div class="testimonial-grid">
+
+
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                        <i class="fas fa-quote-right quote-icon"></i>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Absolutely love the quality of the clothes! The summer collection is
+                            fantastic. Fast shipping and the packaging was so premium. Will definitely shop again."</p>
+                        <div class="client-info">
+                            <img src="/asset/woman1.webp" alt="Sarah Jen">
+                            <div class="client-details">
+                                <h4>Sarah Jen</h4>
+                                <span>Fashion Blogger</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <i class="fas fa-quote-right quote-icon"></i>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="review-text">"The customer service is top-notch. I had to exchange a shirt for a
+                            different size, and the process was seamless. Highly recommend Vogue Boutique!"</p>
+                        <div class="client-info">
+                            <img src="/asset/man1.webp" alt="Michael Doe">
+                            <div class="client-details">
+                                <h4>Michael Doe</h4>
+                                <span>Regular Customer</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <i class="fas fa-quote-right quote-icon"></i>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Finding trendy accessories has never been this easy. The products look
+                            exactly like the pictures, maybe even better in person. 10/10 experience!"</p>
+                        <div class="client-info">
+                            <img src="/asset/woman2.webp" alt="Emily Rose">
+                            <div class="client-details">
+                                <h4>Emily Rose</h4>
+                                <span>Stylist</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="newsletter" class="newsletter-section section-padding">
+            <div class="container newsletter-container">
+
+                <div class="newsletter-content" data-aos="fade-right" data-aos-duration="1000">
+                    <h2>Subscribe to our <span>Newsletter</span></h2>
+                    <p>Get 20% off on your first order and be the first to know about new arrivals, sales & promos!</p>
+                </div>
+
+                <div data-aos="fade-left" data-aos-duration="1000" style="flex: 1; width: 100%;">
+                    <form id="newsletter-form" class="newsletter-form" novalidate>
+                        <input type="email" id="newsletter-email" placeholder="Enter your email address">
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </form>
+
+                    <div id="newsletter-message" class="form-message"></div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+
+
+                <div class="footer-col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <a href="index.html" class="logo-container">
+                        <img src="./asset/logo.webp" alt="Company Logo" class="logo-img">
+                    </a>
+                    <p class="footer-desc">Your ultimate destination for premium fashion and trendy clothing. Redefining
+                        your style with our exclusive collections.</p>
+                    <div class="social-links">
+                        <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404.html"><i class="fab fa-instagram"></i></a>
+                        <a href="404.html"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="footer-col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="404.html"><i class="fas fa-angle-right"></i> Shop</a></li>
+                        <li><a href="404.html"><i class="fas fa-angle-right"></i> Reviews</a></li>
+                        <li><a href="404.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="404.html"><i class="fas fa-angle-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="404.html"><i class="fas fa-angle-right"></i> Women's Fashion</a></li>
+                        <li><a href="404.html"><i class="fas fa-angle-right"></i> Men's Fashion</a></li>
+                        <li><a href="404.html"><i class="fas fa-angle-right"></i> Kids Wear</a></li>
+                        <li><a href="404.html"><i class="fas fa-angle-right"></i> Accessories</a></li>
+                        <li><a href="404.html"><i class="fas fa-angle-right"></i> Shoes</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, NY 10001, USA</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 (234) 567-8900</li>
+                        <li><i class="fas fa-envelope"></i> support@vogueboutique.com</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="footer-bottom" data-aos="fade-in
+        " data-aos-duration="1000" data-aos-delay="500">
+            <div class="container">
+                <p>&copy; <span id="current-year"></span> Vogue Boutique. All Rights Reserved. Designed for you.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 50 // Trigger animation slightly earlier when scrolling
+        });
+    </script>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
